@@ -1,0 +1,2 @@
+Prosedur Pengerjaan Tugas GJB
+Buatlah visualisasi gerak jatuh bebas dengan hasil akhir visual python yang bergerak. Simulasi jatuh bebas dengan kecepatan beragam (minimal 8 kecepatan). Diketahui ketinggian awal 88 m. Tampilkan perhitungan waktu simulasi dalam visualisasi tersebut.
