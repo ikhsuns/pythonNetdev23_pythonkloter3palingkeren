@@ -1,0 +1,45 @@
+## MEMBUAT PROGRAM BANK ATM OOP##
+
+class Bank:
+
+    def __init__(self, nama):
+        self.nama = nama
+        self.saldo = 1000000
+
+    def cekSaldo(self):
+        print("Saldo Nasabah Sebesar Rp" + str(self.saldo))
+    
+    def kurangSaldo(self, tunai):
+        self.saldo -= tunai
+    
+    def tambahSaldo(self, tunai):
+        self.saldo += tunai
+
+    def transferSaldo(self, tunai):
+        if (self.saldo >= tunai):
+            self.kurangSaldo(tunai)
+        else :
+            print("Maaf Saldo " + self.nama + " Tidak Mencukupi")
+
+    def setorSaldo(self, tunai):
+        self.tambahSaldo(tunai)
+        print("Saldo " + self.nama + " Telah Bertambah")
+        self.cekSaldo()
+
+
+orang1 = Bank("Robin")
+
+print("Nama Nasabah adalah " + orang1.nama)
+Bank.cekSaldo(orang1)
+
+print("Robin Melakukan Transaksi Transfer Rp700.000 ke Rekening Lain")
+Bank.transferSaldo(orang1, 700000)
+Bank.cekSaldo(orang1)
+
+print("Robin Melakukan Transaksi Setor Tunai Rp100.000 ke Rekening Lain")
+Bank.setorSaldo(orang1, 100000)
+Bank.cekSaldo(orang1)
+
+print("Robin Melakukan Transaksi Transfer Rp500.000 ke Rekening Lain")
+Bank.transferSaldo(orang1, 500000)
+Bank.cekSaldo(orang1)
